@@ -1,4 +1,5 @@
 
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import {
   SafeAreaView,
@@ -17,7 +18,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { TravelHome } from './src/Screen';
+import Routes from './src/Routes';
+import { TravelCity } from './src/Screen';
+// import { TravelCity } from './src/Screen';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -25,7 +28,10 @@ import { TravelHome } from './src/Screen';
 
 const App = () => {
   return (
-    <TravelHome/>
+    <NavigationContainer>
+      <TravelCity/>
+   {/* <Routes/> */}
+   </NavigationContainer>
   );
 };
 
